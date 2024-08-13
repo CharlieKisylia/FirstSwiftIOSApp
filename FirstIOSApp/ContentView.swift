@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var total = ""
     var body: some View {
         VStack {
-            Image(systemName: "dollarsign.circle.fill")
-                .imageScale(.large)
-                .foregroundStyle(.black, .green)
-            Text("Tip Calculator").bold()
+            HStack {
+                Image(systemName: "dollarsign.circle.fill")
+                    .imageScale(.large)
+                    .foregroundStyle(.black, .green)
+                    .font(.title)
+                Text("Tip Calculator")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+            }
+            HStack {
+                Text("$").bold()
+                TextField("Amount", text: $total)
+            }
         }
         .padding()
     }
