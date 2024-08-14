@@ -31,7 +31,7 @@ struct ContentView: View {
                 Text("%")
             }
             if let totalNum = Double(total) {
-                Text("Value is a number")
+                Text("Tip Amount: $\(totalNum * tipPercent / 100, specifier: "%0.2f")")
             } else {
                 Text("Please put a number in the amount field")
             }
